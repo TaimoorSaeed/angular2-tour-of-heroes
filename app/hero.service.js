@@ -9,12 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mock_heroes_1 = require('./mock-heroes');
+// import{ HEROES } from './mock-heroes';
 var HeroService = (function () {
     function HeroService() {
+        this.heroesUrl = 'app/heroes';
     }
     HeroService.prototype.getHeroes = function () {
-        return Promise.resolve(mock_heroes_1.HEROES);
+        return Promise.resolve(HEROES);
     };
     HeroService.prototype.getHero = function (id) {
         return this.getHeroes()
